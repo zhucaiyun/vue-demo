@@ -1,5 +1,9 @@
 # vue-demo
 
+
+### 这是vue学习过程中敲的demo；
+
+
 ## Project setup
 ```
 npm install
