@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import cssDemo from './cssDemo.vue'
+import cssDemo from './css-demo.vue'
 export default {
   name: 'HelloWorld',
   data() {

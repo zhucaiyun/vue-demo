@@ -1,21 +1,31 @@
 <template>
   <div id="app">
     <!-- css选择器 -->
-    <HelloWorld msg="Welcome to Your Vue.js App" @click.native="noNative"/>
+    <css-dom msg="Welcome to Your Vue.js App" @click.native="noNative"/>
     <!-- 事件捕获和冒泡 -->
     <stop-prevent> </stop-prevent> 
     <!-- shift 是否按下事件监听 -->
-    <demo-shift></demo-shift>
+    <shift-key/>
     <!-- 插槽 -->
     <slot-demo></slot-demo>
+
+    <!-- 非同源图片下载 -->
+    <img-cors></img-cors>
+    <!-- diff-key -->
+    <key-diff></key-diff>
+    <!-- ref -->
+    <ref-attr></ref-attr>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import StopPrevent from'./components/stopPrevent.vue'
-import DemoShift from'./components/demo.vue'
+import CssDom from './components/css-dom.vue'
+import StopPrevent from'./components/stop-prevent.vue'
 import SlotDemo from './components/slot-demo.vue'
+import ImgCors from './components/img-cors.vue'
+import ShiftKey from './components/shift-key.vue'
+import KeyDiff from './components/vue-key-diff.vue'
+import RefAttr from './components/ref-attr.vue'
 
 export default {
   name: 'App',
@@ -24,10 +34,13 @@ export default {
     }
   }, 
   components: {
-    HelloWorld,
+    CssDom,
     StopPrevent,
-    DemoShift,
-    SlotDemo
+    SlotDemo,
+    ImgCors,
+    ShiftKey,
+    KeyDiff,
+    RefAttr
   },
   methods: {
     // 事件冒泡和捕获的例子
