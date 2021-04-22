@@ -15,6 +15,8 @@
     <key-diff></key-diff>
     <!-- ref -->
     <ref-attr></ref-attr>
+    <!-- property -->
+    <property testProp="朱彩云 prop"></property>
   </div>
 </template>
 
@@ -26,6 +28,7 @@ import ImgCors from './components/img-cors.vue'
 import ShiftKey from './components/shift-key.vue'
 import KeyDiff from './components/vue-key-diff.vue'
 import RefAttr from './components/ref-attr.vue'
+import Property from './components/property/index.vue'
 
 export default {
   name: 'App',
@@ -40,7 +43,8 @@ export default {
     ImgCors,
     ShiftKey,
     KeyDiff,
-    RefAttr
+    RefAttr,
+    Property
   },
   methods: {
     // 事件冒泡和捕获的例子

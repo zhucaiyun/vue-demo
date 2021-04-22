@@ -2,7 +2,7 @@
  * @Author       : zhucaiyun1@xdf.cn
  * @Date         : 2021-04-14 16:39:02
  * @LastEditors  : zhucaiyun1@xdf.cn
- * @LastEditTime : 2021-04-15 18:22:15
+ * @LastEditTime : 2021-04-22 14:17:49
  * @Description  : ref
 -->
 <template>
@@ -32,17 +32,20 @@
     components: {KeyDiff},
     data() {
       return {
-        isShow: true, 
+        isShow: false, 
         propses: 'hello world',
         testProp:`<span style="color: red">confidence</span>`
 
       }
     },
     mounted() {
+      console.log('---------refs-------')
+      console.log(this.$refs)
       console.log(this.$refs.normalRef)
     },
     methods: {
       changeKey() {
+        
         console.log(this.$refs.keyDiff)
         this.$refs.keyDiff.changeFruit()
       }

@@ -2,7 +2,7 @@
  * @Author       : zhucaiyun1@xdf.cn
  * @Date         : 2021-04-14 13:36:36
  * @LastEditors  : zhucaiyun1@xdf.cn
- * @LastEditTime : 2021-04-15 18:00:15
+ * @LastEditTime : 2021-04-22 17:53:41
  * @Description  : vue 特殊的attribute&客串一下ref-attrs
 -->
 <template>
@@ -18,16 +18,25 @@
         <span :key="index">{{transData}}</span>
       </transition>
     </div>
+    <div>
+      <button @click="changeObj">点我改对象</button>
+      <data-diff :setData="dataObj"></data-diff>
+    </div>
   </div>
 </template>
 <script>
+  import dataDiff from './data-diff.vue'
   export default({
     name: 'vue-key-diff',
+    components: {
+      dataDiff
+    },
     data() {
       return {
-        isShow: true,
+        isShow: false,
         transData: '苹果',
-        index:0
+        index:0,
+        dataObj: []
       }
     },
     props: {
@@ -40,6 +49,18 @@
       //   default: ''
       // }
     },
+    mounted() {
+      this.dataObj =[
+          {
+            proName: 'friends',
+            datas: [
+              {name:'monic',age: 2},
+              {name:'richeal',age: 26},
+              {name:'ross',age: 1},
+            ]
+          }
+        ]
+    },
     methods: {
       changeFruit() {
         // console.log(this.testAttrProp)
@@ -48,10 +69,22 @@
         const getRandomIndex = parseInt(Math.random()*5)
         const fruitsArr = ['apple','pear','strawberry','grape','peach']
         this.transData =  fruitsArr[getRandomIndex]
+      },
+      changeObj() {
+        this.dataObj= [
+          {
+            proName: 'friends',
+            datas: [
+              {name:'monic',age: 2},
+              {name:'richeal',age: 3},
+              {name:'ross',age: 1},
+            ]
+          }
+        ]
       }
     }
   })
-</script>
+</script>    
 <style>
   .fade-enter-active, .fade-leave-active {
     transition: opacity .5s;
