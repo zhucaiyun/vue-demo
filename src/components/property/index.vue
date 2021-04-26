@@ -2,7 +2,7 @@
  * @Author       : zhucaiyun1@xdf.cn
  * @Date         : 2021-04-19 15:07:14
  * @LastEditors  : zhucaiyun1@xdf.cn
- * @LastEditTime : 2021-04-22 14:53:44
+ * @LastEditTime : 2021-04-26 09:58:56
  * @Description  : property的例子
 -->
 <template>
@@ -18,7 +18,8 @@
         <p>all name is : {{testObjChange.name}}</p>
         <p>prop is : {{testProp}}</p>
       </div>
-      <div>注：$slots,$scopedSlots在slot-demo中实现</div>
+      <div>注：$slots,$scopedSlots在slot-demo中实现 没找到怎么用？？？</div>
+      <!-- $attrs -->
     </div>
   </div>
 </template>

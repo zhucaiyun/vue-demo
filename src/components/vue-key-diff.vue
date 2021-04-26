@@ -2,7 +2,7 @@
  * @Author       : zhucaiyun1@xdf.cn
  * @Date         : 2021-04-14 13:36:36
  * @LastEditors  : zhucaiyun1@xdf.cn
- * @LastEditTime : 2021-04-22 17:53:41
+ * @LastEditTime : 2021-04-26 10:52:45
  * @Description  : vue 特殊的attribute&客串一下ref-attrs
 -->
 <template>
@@ -20,7 +20,8 @@
     </div>
     <div>
       <button @click="changeObj">点我改对象</button>
-      <data-diff :setData="dataObj"></data-diff>
+      <!-- v-bind="$attrs" -->
+      <data-diff :setData="dataObj" :getData="dataObj" name="zhucaiyun" id="dataDiff"></data-diff>
     </div>
   </div>
 </template>
@@ -28,6 +29,7 @@
   import dataDiff from './data-diff.vue'
   export default({
     name: 'vue-key-diff',
+    inheritAttrs: false,
     components: {
       dataDiff
     },
