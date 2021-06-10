@@ -2,13 +2,14 @@
  * @Author       : zhucaiyun1@xdf.cn
  * @Date         : 2021-04-14 16:39:02
  * @LastEditors  : zhucaiyun1@xdf.cn
- * @LastEditTime : 2021-04-22 14:17:49
+ * @LastEditTime : 2021-06-10 10:22:04
  * @Description  : ref
 -->
 <template>
   <div class="ref-attr">
     <button @click="isShow=!isShow">ref-attr</button>
     <span>这是ref code</span>
+    <ion>这是ion标签</ion>
     <div v-if="isShow">
       <p ref='normalRef'>this is a normal document element</p>
       <button @click="changeKey">操控子组件的切换事件</button>
@@ -56,5 +57,9 @@
   .ref-attr {
     width: 50%;
     border: 1px solid grey;
+  }
+  ion {
+    color: red;
+    margin-left: 30px;
   }
 </style>

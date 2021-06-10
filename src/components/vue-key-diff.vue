@@ -2,7 +2,7 @@
  * @Author       : zhucaiyun1@xdf.cn
  * @Date         : 2021-04-14 13:36:36
  * @LastEditors  : zhucaiyun1@xdf.cn
- * @LastEditTime : 2021-04-26 10:52:45
+ * @LastEditTime : 2021-04-27 16:16:51
  * @Description  : vue 特殊的attribute&客串一下ref-attrs
 -->
 <template>
@@ -21,7 +21,7 @@
     <div>
       <button @click="changeObj">点我改对象</button>
       <!-- v-bind="$attrs" -->
-      <data-diff :setData="dataObj" :getData="dataObj" name="zhucaiyun" id="dataDiff"></data-diff>
+      <data-diff :setData="dataObj" :getData="dataObj" name="zhucaiyun" id="dataDiff" @sayHi="sayHi" @sayName="sayName"></data-diff>
     </div>
   </div>
 </template>
@@ -83,6 +83,12 @@
             ]
           }
         ]
+      },
+      sayHi() {
+        console.log('sayHi hi')
+      },
+      sayName() {
+        console.log('hi,Monic')
       }
     }
   })
