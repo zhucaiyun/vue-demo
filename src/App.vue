@@ -16,7 +16,7 @@
     <!-- ref -->
     <ref-attr></ref-attr>
     <!-- property -->
-    <property testProp="朱彩云 prop"></property>
+    <property testProp="prop"></property>
   </div>
 </template>
 
@@ -44,7 +44,7 @@ export default {
     ShiftKey,
     KeyDiff,
     RefAttr,
-    Property
+    Property,
   },
   methods: {
     // 事件冒泡和捕获的例子

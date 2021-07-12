@@ -35,4 +35,4 @@ Vue.config.keyCodes={
 Vue.config.performance=true
 
 /*************************************全局api 这些功能也可以用于局部***********************************************/
-
+// 详见 property/index.vue

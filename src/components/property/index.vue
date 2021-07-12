@@ -2,7 +2,7 @@
  * @Author       : zhucaiyun1@xdf.cn
  * @Date         : 2021-04-19 15:07:14
  * @LastEditors  : zhucaiyun1@xdf.cn
- * @LastEditTime : 2021-06-10 18:16:17
+ * @LastEditTime : 2021-07-12 16:07:56
  * @Description  : property的例子
 -->
 <template>
@@ -26,14 +26,14 @@
       </div>
       <input type="text" @keyup.media-play-pause="vis">
     </div>
-    <button @click="isShowGlobalAPI">全局API</button>
+    <button @click="isShowGlobalAPI=!isShowGlobalAPI">全局API</button>
     <div v-if="isShowGlobalAPI">
       <h3>全局API</h3>
       <div>
         <!-- extend -->
         <div id="mount-point">
           <!-- 挂载extend -->
-
+          
         </div>
         <div>
           set:
@@ -67,7 +67,8 @@
       testDaily: {
         type: Object,
         default: ()=>{}
-      }
+      },
+      
     },
     data() {
       return {
@@ -83,8 +84,22 @@
         zhu: {
           
         },
-        filterData: 'zhuShuyun'
+        filterData: 'filter:把第一个字母大写'
       }
+    },
+    provide() {
+
+    },
+    inject: {
+
+    },
+    // 一个值依赖另一个值，是值的依赖，不会有过多的操作
+    computed: {
+      
+    },
+    // watch 可以做复杂的变化，
+    watch: {
+      
     },
     created() {
       var Profile = Vue.extend({
@@ -131,6 +146,14 @@
         return value.charAt(0).toUpperCase()+value.slice(1)
       })
       // component
+      // Vue.component() 开发全局组件
+      
+      // use plugin 什么算plugin呢
+      // Vue.use(plugin) Vue.install()的用法
+      // 数据选项 data props propsData computed methods watch
+      // computed watch区别
+      
+
       
     },
     mounted() {

@@ -2,7 +2,7 @@
  * @Author       : zhucaiyun1@xdf.cn
  * @Date         : 2021-04-14 13:36:36
  * @LastEditors  : zhucaiyun1@xdf.cn
- * @LastEditTime : 2021-04-27 16:16:51
+ * @LastEditTime : 2021-07-05 18:09:17
  * @Description  : vue 特殊的attribute&客串一下ref-attrs
 -->
 <template>
@@ -38,7 +38,8 @@
         isShow: false,
         transData: '苹果',
         index:0,
-        dataObj: []
+        dataObj: [],
+        hhh: [1,3,4]
       }
     },
     props: {
@@ -62,6 +63,9 @@
             ]
           }
         ]
+      var c = this.testMap(this.hhh)
+      console.error(c)
+
     },
     methods: {
       changeFruit() {
@@ -89,6 +93,13 @@
       },
       sayName() {
         console.log('hi,Monic')
+      },
+      testMap(data) {
+        return data.map(item=>{
+          return {
+            a: item
+          }
+        })
       }
     }
   })
